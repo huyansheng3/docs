@@ -381,7 +381,7 @@ myComment.put("post", AVObject.createWithoutData("Post", "1zEcyElZ80"));
 默认情况下，当你获取一个对象的时候，关联的 `AVObject` 不会被获取。这些对象的值无法获取，直到他们调用 `fetch`:
 
 ```java
-fetchedComment.getAVObject("post")
+fetchedComment.getAVObject("post") //此处不太明白fetchedComment是怎么回事，AS中也未有此方法的提示
     .fetchIfNeededInBackground(new GetCallback<AVObject>() {
         public void done(AVObject object, AVException e) {
           String title = post.getString("title");
